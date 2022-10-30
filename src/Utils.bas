@@ -79,42 +79,6 @@ Sub clearAllData()
 
 End Sub
 
-Sub inputSampleData()
-' サンプルデータをセットする
-' デバッグ用
-    Dim rootPath, filePath
-    Dim str As String
-
-    ' サンプルデータファイルパス
-    rootPath = ThisWorkbook.Path
-    filePath = rootPath & "\sampleData\sampleData.txt"
-    
-    ' データを読み込む
-    With CreateObject("ADODB.Stream")
-        .Charset = "UTF-8"
-        .Open
-        .LoadFromFile filePath
-        str = .ReadText
-        .Close
-    End With
-    
-    ' クリップボードに値をセット
-    Dim dataObj As DataObject
-    Set dataObj = New DataObject
-    dataObj.SetText str
-    dataObj.PutInClipboard
-    Set dataObj = Nothing
-    
-    ' Dataシートに貼り付け
-    ' NOTE: カンマ区切りのデータを受け付けるように設定する必要がある
-    Sheets("Data").Select
-    Range("B2").Select
-    ActiveSheet.Paste
-    
-    Range("A1").Select
-    
-End Sub
-
 Sub exportData()
 ' データをtxtファイルにエクスポート
     ' エクスポートファイルを指定
