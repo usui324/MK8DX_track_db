@@ -114,3 +114,46 @@ Sub inputSampleData()
     Range("A1").Select
     
 End Sub
+
+Sub exportData()
+' データをtxtファイルにエクスポート
+    ' 出力する対象シート
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Worksheets("Data")
+    
+    ' 出力ファイル名
+    Dim strFilePath As String
+    strFilePath = ActiveWorkbook.Path & "\trackData.txt"
+    
+    ' ファイルに書き込み
+    Open strFilePath For Output As #1
+    ' 模擬回数
+    Print #1, ws.Cells(1, 8).value & "," & ws.Cells(1, 9).value
+    ' trackData
+    Dim i As Integer
+    For i = 1 To TRACK_NUM
+        Print #1, printLine(ws, i + 1)
+    Next i
+    
+    Close #1
+    
+    MsgBox strFilePath & "にデータを出力しました", vbInformation
+
+End Sub
+
+Function printLine(ws As Worksheet, rowNo As Integer) As String
+' ファイル出力する一行の文字列を返す
+    Dim trackName As String
+    Dim rankSum As String
+    Dim pointSum As String
+    Dim raceNum As String
+    
+    trackName = ws.Cells(rowNo, 1).value
+    rankSum = ws.Cells(rowNo, 2).value
+    pointSum = ws.Cells(rowNo, 3).value
+    raceNum = ws.Cells(rowNo, 4).value
+    
+    Dim str As String
+    printLine = trackName & "," & rankSum & "," & pointSum & "," & raceNum
+    
+End Function

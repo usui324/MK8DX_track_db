@@ -72,3 +72,9 @@ removeMEMO
 Application.ScreenUpdating = True
 
 End Sub
+
+Sub onClickExportData()
+
+exportData
+
+End Sub
