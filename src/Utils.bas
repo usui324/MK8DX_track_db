@@ -157,3 +157,55 @@ Function printLine(ws As Worksheet, rowNo As Integer) As String
     printLine = trackName & "," & rankSum & "," & pointSum & "," & raceNum
     
 End Function
+
+Sub importData()
+' txtファイルからデータをインポート
+    Dim openFileName As String
+    Dim ws As Worksheet
+    Dim line As String
+    Dim arr As Variant
+    Dim rowNo As Integer
+    Dim columnNo As Integer
+
+    ' インポートファイルを指定
+    ChDir ThisWorkbook.Path
+    openFileName = Application.GetOpenFilename("コースデータ,*.txt", , "インポートするデータファイルを指定")
+    
+    ' キャンセル処理
+    If openFileName = "False" Then
+        Exit Sub
+    End If
+    
+    ' 入力対象シート
+    Set ws = ThisWorkbook.Worksheets("Data")
+    
+    ' 模擬回数の入力
+    Open openFileName For Input As #1
+    Line Input #1, line
+    arr = Split(line, ",")
+    ws.Cells(1, 9).value = arr(1)
+    
+    ' コースデータの入力
+    rowNo = 2
+    While Not EOF(1)
+        Line Input #1, line
+        arr = Split(line, ",")
+        
+        ' 配列長が5以上の場合はエラー
+        If UBound(arr) >= 4 Then
+            MsgBox "データが不正です", vbExclamation
+            Exit Sub
+        End If
+        
+        For columnNo = LBound(arr) To UBound(arr)
+            ws.Cells(rowNo, columnNo + 1).value = arr(columnNo)
+        Next columnNo
+        rowNo = rowNo + 1
+    Wend
+    Close #1
+    
+    ' ランキングデータを更新
+    setRanks
+    
+    MsgBox "データをインポートしました", vbInformation
+End Sub
