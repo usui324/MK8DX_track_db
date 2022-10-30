@@ -117,16 +117,22 @@ End Sub
 
 Sub exportData()
 ' データをtxtファイルにエクスポート
+    ' エクスポートファイルを指定
+    ChDir ThisWorkbook.Path
+    Dim saveFileName As String
+    saveFileName = Application.GetSaveAsFilename(InitialFileName:="trackData.txt", filefilter:="コースデータ,*.txt")
+
+    ' キャンセル処理
+    If saveFileName = "False" Then
+        Exit Sub
+    End If
+
     ' 出力する対象シート
     Dim ws As Worksheet
     Set ws = ThisWorkbook.Worksheets("Data")
     
-    ' 出力ファイル名
-    Dim strFilePath As String
-    strFilePath = ActiveWorkbook.Path & "\trackData.txt"
-    
     ' ファイルに書き込み
-    Open strFilePath For Output As #1
+    Open saveFileName For Output As #1
     ' 模擬回数
     Print #1, ws.Cells(1, 8).value & "," & ws.Cells(1, 9).value
     ' trackData
@@ -137,7 +143,7 @@ Sub exportData()
     
     Close #1
     
-    MsgBox strFilePath & "にデータを出力しました", vbInformation
+    MsgBox saveFileName & "にデータを出力しました", vbInformation
 
 End Sub
 
