@@ -2,7 +2,7 @@ Attribute VB_Name = "Utils"
 Sub checkInput()
 ' 入力内容チェック
 
-    Sheets("データ入力").Select
+    Sheets(SHEET1_NAME).Select
     
     Dim errorFlg As Boolean
     errorFlg = False
@@ -27,7 +27,7 @@ End Sub
 Sub resetInput()
 ' 入力削除
 
-    Sheets("データ入力").Select
+    Sheets(SHEET1_NAME).Select
     
     ' 入力削除
     Range("B3:C14").Select
@@ -52,7 +52,7 @@ Sub toDisplaySheet()
 ' ランキングページへ移動
     
     Range("A1").Select
-    Sheets("ランキング").Select
+    Sheets(SHEET2_NAME).Select
     Range("A1").Select
     
 End Sub
@@ -71,7 +71,7 @@ Sub exportData()
 
     ' 出力する対象シート
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Worksheets("Data")
+    Set ws = ThisWorkbook.Worksheets(SHEET3_NAME)
     
     ' ファイルに書き込み
     Open saveFileName For Output As #1
@@ -125,7 +125,7 @@ Sub importData()
     End If
     
     ' 入力対象シート
-    Set ws = ThisWorkbook.Worksheets("Data")
+    Set ws = ThisWorkbook.Worksheets(SHEET3_NAME)
     
     ' 模擬回数の入力
     Open openFileName For Input As #1
@@ -158,15 +158,28 @@ Sub importData()
     MsgBox "データをインポートしました", vbInformation
 End Sub
 
-Sub setWindowSize()
-' Windowサイズの変更
+Sub setWindowSizeDataInput()
+' Windowサイズの調整
     Application.WindowState = xlNormal
     ActiveWindow.Width = 430
+    ActiveWindow.Height = 720
+
+End Sub
+
+Sub setWindowSizeRanking()
+' Windowサイズの調整
+    Application.WindowState = xlNormal
+    ActiveWindow.Width = 1100
+    ActiveWindow.Height = 720
+    
+    ' 画面外に行かないよう位置も調整する
+    ActiveWindow.Top = 0
+    ActiveWindow.Left = 0
 
 End Sub
 
 Sub setSheet()
 ' シートをセット
-    Sheets("データ入力").Select
+    Sheets(SHEET1_NAME).Select
 
 End Sub

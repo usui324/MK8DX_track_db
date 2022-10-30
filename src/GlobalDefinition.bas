@@ -18,3 +18,10 @@ Public Const TRACK_LIST_STR = "ƒ}ƒŠƒIƒJ[ƒgƒXƒ^ƒWƒAƒ€,ƒEƒH[ƒ^[ƒp[ƒN,ƒXƒC[ƒcƒ
                                 "ƒVƒhƒj[ƒTƒ“ƒVƒƒƒCƒ“,ƒXƒm[ƒ‰ƒ“ƒh,ƒLƒmƒRƒLƒƒƒjƒIƒ“,ƒAƒCƒXƒrƒ‹ƒfƒBƒ“ƒO"
 ' ƒR[ƒX”
 Public Const TRACK_NUM = 64
+
+' ƒV[ƒg–¼
+Public Const SHEET1_NAME = "ƒf[ƒ^“ü—Í"
+Public Const SHEET2_NAME = "ƒ‰ƒ“ƒLƒ“ƒO"
+Public Const SHEET3_NAME = "Data"
+Public Const SHEET4_NAME = "MasterData"
+

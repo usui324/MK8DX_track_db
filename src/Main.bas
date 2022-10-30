@@ -19,7 +19,7 @@ resetInput
 
 ' ランキングの更新
 setRanks
-Sheets("データ入力").Select
+Sheets(SHEET1_NAME).Select
 
 ' 保存確認ポップアップ
 putButton = MsgBox("Bookを保存しますか？", vbYesNo)
@@ -57,7 +57,7 @@ Application.ScreenUpdating = False
 setRanks
 
 ' 表示シートのセット
-Sheets("ランキング").Select
+Sheets(SHEET2_NAME).Select
 
 Application.ScreenUpdating = True
 

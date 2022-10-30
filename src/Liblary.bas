@@ -57,7 +57,7 @@ Sub clearAllData()
 ' デバッグ用
 
     ' Dataシート
-    Sheets("Data").Select
+    Sheets(SHEET3_NAME).Select
     
     Cells(1, 9).value = "0"
     

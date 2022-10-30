@@ -18,13 +18,13 @@ Sub setRankPopular()
 ' 人気コースランキング(B2)の作成
     
     ' レース数_降順でソート
-    Sheets("Data").Select
+    Sheets(SHEET3_NAME).Select
     sortDataByRaceNumDown
     
     ' 上から10列をランキングに表示
     Call setRankTopTen(2, 2, 4)
     
-    Sheets("ランキング").Select
+    Sheets(SHEET2_NAME).Select
     Range("A1").Select
 
 End Sub
@@ -33,13 +33,13 @@ Sub setRankNotPopular()
 ' 不人気コースランキング(B14)の作成
     
     ' レース数_昇順でソート
-    Sheets("Data").Select
+    Sheets(SHEET3_NAME).Select
     sortDataByRaceNumUp
     
     ' 上から10列をランキングに表示
     Call setRankTopTen(14, 2, 4)
     
-    Sheets("ランキング").Select
+    Sheets(SHEET2_NAME).Select
     Range("A1").Select
     
 End Sub
@@ -48,7 +48,7 @@ Sub setRankGoodRank()
 ' 得意コース（平均順位）ランキング(F2)の作成
     
     ' 平均順位_昇順でソート
-    Sheets("Data").Select
+    Sheets(SHEET3_NAME).Select
     sortDataByAvgRankUp
     
     ' 上から10列をランキングに表示
@@ -57,7 +57,7 @@ Sub setRankGoodRank()
     ' ソートフィルターのリセット
     sortFilterReset
     
-    Sheets("ランキング").Select
+    Sheets(SHEET2_NAME).Select
     Range("A1").Select
 
 End Sub
@@ -66,7 +66,7 @@ Sub setRankBadRank()
 ' 不得意コースランキング(F14)の作成
     
     ' 平均順位_降順でソート
-    Sheets("Data").Select
+    Sheets(SHEET3_NAME).Select
     sortDataByAvgRankDown
     
     ' 上から10列をランキングに表示
@@ -75,7 +75,7 @@ Sub setRankBadRank()
     ' ソートフィルターのリセット
     sortFilterReset
     
-    Sheets("ランキング").Select
+    Sheets(SHEET2_NAME).Select
     Range("A1").Select
 
 End Sub
@@ -84,7 +84,7 @@ Sub setRankHighValueRank()
 ' 上位期待値ランキング(J14)の作成
     
     ' 上位期待値_降順でソート
-    Sheets("Data").Select
+    Sheets(SHEET3_NAME).Select
     sortDataByAvgValueUp
     
     ' 上から10列をランキングに表示
@@ -93,7 +93,7 @@ Sub setRankHighValueRank()
     ' ソートフィルターのリセット
     sortFilterReset
     
-    Sheets("ランキング").Select
+    Sheets(SHEET2_NAME).Select
     Range("A1").Select
 
 End Sub
@@ -102,7 +102,7 @@ Sub setRankGoodPointRank()
 ' 得意コース（平均得点）ランキング(J2)の作成
     
     ' 平均得点_降順でソート
-    Sheets("Data").Select
+    Sheets(SHEET3_NAME).Select
     sortDataByAvgPointDown
     
     ' 上から10列をランキングに表示
@@ -111,7 +111,7 @@ Sub setRankGoodPointRank()
     ' ソートフィルターのリセット
     sortFilterReset
     
-    Sheets("ランキング").Select
+    Sheets(SHEET2_NAME).Select
     Range("A1").Select
 
 End Sub
@@ -119,13 +119,13 @@ End Sub
 Function setRegurationRaceNum() As Integer
 ' ランキング掲載の基準レース数をセット
     
-    setRegurationRaceNum = Sheets("ランキング").Cells(3, 14).value
+    setRegurationRaceNum = Sheets(SHEET2_NAME).Cells(3, 14).value
 End Function
 
 Sub deleteRanks()
 ' 全てのランキングを削除する
 
-    Sheets("ランキング").Select
+    Sheets(SHEET2_NAME).Select
     
     Range("C3", "D12").Select
     Selection.ClearContents
