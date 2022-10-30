@@ -75,6 +75,19 @@ End Sub
 
 Sub onClickExportData()
 
+Application.ScreenUpdating = False
+
 exportData
 
+Application.ScreenUpdating = True
+
+End Sub
+
+Sub onClickImportData()
+
+Application.ScreenUpdating = False
+
+importData
+
+Application.ScreenUpdating = True
 End Sub
