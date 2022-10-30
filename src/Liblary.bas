@@ -22,7 +22,7 @@ Sub ExportAll()
 
     ' モジュール一覧を取得
     Set moduleList = targetBook.VBProject.VBComponents
-
+    
     ' 各モジュールに対する処理
     For Each module In moduleList
         ' クラス
@@ -36,6 +36,7 @@ Sub ExportAll()
             extension = "bas"
         ' その他
         Else
+            MsgBox module.Type
             GoTo CONTINUE
         End If
         
@@ -50,3 +51,26 @@ CONTINUE:
     Next
 
 End Sub
+
+Sub clearAllData()
+' 全てのデータの削除
+' デバッグ用
+
+    ' Dataシート
+    Sheets("Data").Select
+    
+    Cells(1, 9).value = "0"
+    
+    For rowNum = 2 To TRACK_NUM + 1
+        Cells(rowNum, 2).value = "0"
+        Cells(rowNum, 3).value = "0"
+        Cells(rowNum, 4).value = "0"
+    Next rowNum
+    
+    ' ランキングシート
+    deleteRanks
+    
+    Range("A1").Select
+
+End Sub
+

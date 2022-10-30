@@ -57,28 +57,6 @@ Sub toDisplaySheet()
     
 End Sub
 
-Sub clearAllData()
-' 全てのデータの削除
-' デバッグ用
-
-    ' Dataシート
-    Sheets("Data").Select
-    
-    Cells(1, 9).value = "0"
-    
-    For rowNum = 2 To TRACK_NUM + 1
-        Cells(rowNum, 2).value = "0"
-        Cells(rowNum, 3).value = "0"
-        Cells(rowNum, 4).value = "0"
-    Next rowNum
-    
-    ' ランキングシート
-    deleteRanks
-    
-    Range("A1").Select
-
-End Sub
-
 Sub exportData()
 ' データをtxtファイルにエクスポート
     ' エクスポートファイルを指定
@@ -178,4 +156,17 @@ Sub importData()
     setRanks
     
     MsgBox "データをインポートしました", vbInformation
+End Sub
+
+Sub setWindowSize()
+' Windowサイズの変更
+    Application.WindowState = xlNormal
+    ActiveWindow.Width = 430
+
+End Sub
+
+Sub setSheet()
+' シートをセット
+    Sheets("データ入力").Select
+
 End Sub
