@@ -36,7 +36,6 @@ Sub ExportAll()
             extension = "bas"
         ' ‚»‚Ì‘¼
         Else
-            MsgBox module.Type
             GoTo CONTINUE
         End If
         

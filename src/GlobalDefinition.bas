@@ -15,9 +15,11 @@ Public Const TRACK_LIST_STR = "ƒ}ƒŠƒIƒJ[ƒgƒXƒ^ƒWƒAƒ€,ƒEƒH[ƒ^[ƒp[ƒN,ƒXƒC[ƒcƒ
                                 "ƒpƒŠƒvƒƒ€ƒi[ƒh,ƒLƒmƒsƒIƒT[ƒLƒbƒg,ƒ`ƒ‡ƒRƒ}ƒEƒ“ƒeƒ“,ƒRƒRƒiƒbƒcƒ‚[ƒ‹," & _
                                 "ƒg[ƒLƒ‡[ƒXƒNƒ‰ƒ“ƒuƒ‹,ƒLƒmƒRƒŠƒbƒWƒEƒFƒC,GBAƒXƒJƒCƒK[ƒfƒ“,ƒjƒ“ƒjƒ“ƒh[ƒWƒ‡[," & _
                                 "ƒjƒ…[ƒˆ[ƒNƒhƒŠ[ƒ€,SFCƒ}ƒŠƒIƒT[ƒLƒbƒg3,64ƒJƒ‰ƒJƒ‰‚³‚Î‚­,ƒƒ‹ƒC[ƒWƒsƒ“ƒ{[ƒ‹," & _
-                                "ƒVƒhƒj[ƒTƒ“ƒVƒƒƒCƒ“,ƒXƒm[ƒ‰ƒ“ƒh,ƒLƒmƒRƒLƒƒƒjƒIƒ“,ƒAƒCƒXƒrƒ‹ƒfƒBƒ“ƒO"
+                                "ƒVƒhƒj[ƒTƒ“ƒVƒƒƒCƒ“,ƒXƒm[ƒ‰ƒ“ƒh,ƒLƒmƒRƒLƒƒƒjƒIƒ“,ƒAƒCƒXƒrƒ‹ƒfƒBƒ“ƒO," & _
+                                "ƒƒ“ƒhƒ“ƒAƒxƒjƒ…[,ƒeƒŒƒTƒŒƒCƒN,ƒƒbƒNƒƒbƒNƒ}ƒEƒ“ƒeƒ“,ƒƒCƒvƒ‹ƒcƒŠ[ƒnƒEƒX," & _
+                                "ƒxƒ‹ƒŠƒ“ƒVƒ…ƒgƒ‰[ƒZ,ƒs[ƒ`ƒK[ƒfƒ“,ƒƒŠ[ƒƒŠ[ƒ}ƒEƒ“ƒeƒ“,3DSƒŒƒCƒ“ƒ{[ƒ[ƒh"
 ' ƒR[ƒX”
-Public Const TRACK_NUM = 64
+Public Const TRACK_NUM = 72
 
 ' ƒV[ƒg–¼
 Public Const SHEET1_NAME = "ƒf[ƒ^“ü—Í"
