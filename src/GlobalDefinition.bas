@@ -17,7 +17,7 @@ Public Const TRACK_LIST_STR = "ƒ}ƒŠƒIƒJ[ƒgƒXƒ^ƒWƒAƒ€,ƒEƒH[ƒ^[ƒp[ƒN,ƒXƒC[ƒcƒ
                                 "ƒjƒ…[ƒˆ[ƒNƒhƒŠ[ƒ€,SFCƒ}ƒŠƒIƒT[ƒLƒbƒg3,64ƒJƒ‰ƒJƒ‰‚³‚Î‚­,ƒƒ‹ƒC[ƒWƒsƒ“ƒ{[ƒ‹," & _
                                 "ƒVƒhƒj[ƒTƒ“ƒVƒƒƒCƒ“,ƒXƒm[ƒ‰ƒ“ƒh,ƒLƒmƒRƒLƒƒƒjƒIƒ“,ƒAƒCƒXƒrƒ‹ƒfƒBƒ“ƒO," & _
                                 "ƒƒ“ƒhƒ“ƒAƒxƒjƒ…[,ƒeƒŒƒTƒŒƒCƒN,ƒƒbƒNƒƒbƒNƒ}ƒEƒ“ƒeƒ“,ƒƒCƒvƒ‹ƒcƒŠ[ƒnƒEƒX," & _
-                                "ƒxƒ‹ƒŠƒ“ƒVƒ…ƒgƒ‰[ƒZ,ƒs[ƒ`ƒK[ƒfƒ“,ƒƒŠ[ƒƒŠ[ƒ}ƒEƒ“ƒeƒ“,3DSƒŒƒCƒ“ƒ{[ƒ[ƒh" & _
+                                "ƒxƒ‹ƒŠƒ“ƒVƒ…ƒgƒ‰[ƒZ,ƒs[ƒ`ƒK[ƒfƒ“,ƒƒŠ[ƒƒŠ[ƒ}ƒEƒ“ƒeƒ“,3DSƒŒƒCƒ“ƒ{[ƒ[ƒh," & _
                                 "ƒAƒ€ƒXƒeƒ‹ƒ_ƒ€ƒuƒ‹[ƒ€,ƒŠƒo[ƒTƒCƒhƒp[ƒN,DKƒXƒm[ƒ{[ƒhƒNƒƒX,ƒˆƒbƒV[ƒAƒCƒ‰ƒ“ƒh," & _
                                 "ƒoƒ“ƒRƒNƒ‰ƒbƒVƒ…,DSƒ}ƒŠƒIƒT[ƒLƒbƒg,ƒƒ‹ƒC[ƒWƒXƒ^ƒWƒAƒ€,ƒVƒ“ƒKƒ|[ƒ‹ƒXƒvƒ‰ƒbƒVƒ…"
 ' ƒR[ƒX”
